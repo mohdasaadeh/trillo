@@ -25,8 +25,115 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
+.logo {
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  margin: 0 auto;
+}
+
+.icon-nav {
+  height: 2rem;
+  width: 2rem;
+  fill: var(--color-grey-dark-2);
+}
+
+.icon-img-nav {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 10rem;
+}
+
+.search {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60%;
+}
+.search__input {
+  width: 60%;
+  height: 100%;
+  padding: 0 1rem;
+  border: none;
+  border-radius: 10rem;
+  background-color: var(--color-grey-light-3);
+  font-family: inherit;
+  font-size: 1.3rem;
+  color: var(--color-grey-dark-1);
+}
+.search__input:focus {
+  outline: none;
+}
+.search__input::-webkit-input-placeholder {
+  font-size: 1.1rem;
+  color: var(--color-grey-light-4);
+}
+.search__icon {
+  width: 2rem;
+  height: 2rem;
+  transform: translateX(-3rem);
+  fill: var(--color-grey-dark-3);
+}
+
 .header {
   height: 15%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logo {
+  flex: 0 0 10%;
+}
+.header__search {
+  flex: 1;
+  align-self: stretch;
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+}
+.header__nav {
+  flex: 0 0 30%;
+  align-self: stretch;
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+.header__nav--icon {
+  flex: 0 0 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+.header__nav--icon:hover {
+  background-color: var(--color-grey-light-3);
+}
+.header__nav--icon-text {
+  position: absolute;
+  top: 1rem;
+  right: 0.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: var(--color-primary);
+  border-radius: 10rem;
+  color: var(--color-grey-light-1);
+  text-align: center;
+}
+.header__nav--img {
+  flex: 1 0 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 0 0.5rem;
+}
+.header__nav--img-text {
+  padding: 0 0.5rem;
+}
+.header__nav--img:hover {
+  background-color: var(--color-grey-light-3);
 }
 
 .nav {

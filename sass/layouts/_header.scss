@@ -1,3 +1,73 @@
 .header {
   height: 15%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo {
+    flex: 0 0 10%;
+  }
+
+  &__search {
+    flex: 1;
+    align-self: stretch;
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+  }
+
+  &__nav {
+    flex: 0 0 30%;
+    align-self: stretch;
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+
+    &--icon {
+      flex: 0 0 20%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      position: relative;
+
+      &:hover {
+        background-color: var(--color-grey-light-3);
+      }
+
+      &-text {
+        position: absolute;
+        top: 1rem;
+        right: 0.5rem;
+        width: 1.5rem;
+        height: 1.5rem;
+
+        background-color: var(--color-primary);
+        border-radius: 10rem;
+
+        color: var(--color-grey-light-1);
+        text-align: center;
+      }
+    }
+
+    &--img {
+      flex: 1 0 40%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      padding: 0 0.5rem;
+
+      &-text {
+        padding: 0 0.5rem;
+      }
+
+      &:hover {
+        background-color: var(--color-grey-light-3);
+      }
+    }
+  }
 }
