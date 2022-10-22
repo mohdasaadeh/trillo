@@ -1,6 +1,5 @@
 .container {
-  height: 100vh;
-  padding-top: 10rem;
+  padding: 10rem 0;
 
   background-image: linear-gradient(
     to bottom right,
@@ -19,12 +18,12 @@
 
 .content {
   display: flex;
-
-  height: 90%;
 }
 
 .main {
   flex-grow: 1;
+
+  height: fit-content;
 
   &__pics {
     display: flex;
@@ -97,6 +96,22 @@
           color: var(--color-grey-dark-2);
         }
       }
+    }
+  }
+
+  &__footer {
+    padding: 2rem 2rem;
+
+    background-color: var(--color-grey-light-1);
+    text-align: center;
+
+    &--heading {
+      padding: 1rem 0 2rem 0;
+
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: var(--color-grey-dark-2);
+      text-transform: uppercase;
     }
   }
 }

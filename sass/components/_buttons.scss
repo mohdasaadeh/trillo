@@ -1,0 +1,41 @@
+.btn {
+  position: relative;
+
+  border: none;
+  border-radius: 10rem;
+  background-image: linear-gradient(
+    to right,
+    var(--color-primary-light),
+    var(--color-primary-dark)
+  );
+  color: var(--color-grey-light-2);
+  cursor: pointer;
+  overflow: hidden;
+
+  & > * {
+    display: inline-block;
+    transition: all 0.2s;
+
+    width: 100%;
+    height: 100%;
+  }
+
+  &__visible {
+    padding: 1.5rem 4rem;
+  }
+
+  &__invisible {
+    position: absolute;
+    padding: 1.5rem 0;
+    top: -100%;
+    left: 0;
+  }
+
+  &:hover &__visible {
+    transform: translateY(100%);
+  }
+
+  &:hover &__invisible {
+    top: 0;
+  }
+}

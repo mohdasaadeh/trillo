@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --color-primary: #eb2f64;
   --color-primary-light: #ff3366;
@@ -89,6 +90,89 @@ body {
   height: 2rem;
   transform: translateX(-3rem);
   fill: var(--color-grey-dark-3);
+}
+
+.review {
+  position: relative;
+  margin: 2rem 1rem;
+  background-color: var(--color-grey-light-1);
+  box-shadow: 5px 5px 5px var(--color-grey-dark-3);
+  color: var(--color-grey-dark-2);
+}
+.review__body {
+  padding: 2rem 2rem 1rem 2rem;
+  position: relative;
+  z-index: 2;
+}
+.review__footer {
+  display: flex;
+}
+.review__user {
+  display: flex;
+  margin-right: auto;
+  padding: 1rem 2rem;
+}
+.review__user--text {
+  padding-left: 1rem;
+}
+.review__user--img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 10rem;
+}
+.review__user--name {
+  font-size: 1.3rem;
+}
+.review__user--date {
+  font-size: inherit;
+}
+.review__user--rating {
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  font-size: 1.5rem;
+  color: var(--color-primary);
+}
+.review::before {
+  content: "“";
+  position: absolute;
+  top: -2rem;
+  left: -0.5rem;
+  z-index: 1;
+  font-family: sans-serif;
+  font-size: 10rem;
+  color: var(--color-grey-light-3);
+}
+
+.btn {
+  position: relative;
+  border: none;
+  border-radius: 10rem;
+  background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
+  color: var(--color-grey-light-2);
+  cursor: pointer;
+  overflow: hidden;
+}
+.btn > * {
+  display: inline-block;
+  transition: all 0.2s;
+  width: 100%;
+  height: 100%;
+}
+.btn__visible {
+  padding: 1.5rem 4rem;
+}
+.btn__invisible {
+  position: absolute;
+  padding: 1.5rem 0;
+  top: -100%;
+  left: 0;
+}
+.btn:hover .btn__visible {
+  transform: translateY(100%);
+}
+.btn:hover .btn__invisible {
+  top: 0;
 }
 
 .header {
@@ -274,8 +358,7 @@ body {
 }
 
 .container {
-  height: 100vh;
-  padding-top: 10rem;
+  padding: 10rem 0;
   background-image: linear-gradient(to bottom right, var(--color-primary-light), var(--color-primary-dark));
 }
 
@@ -288,11 +371,11 @@ body {
 
 .content {
   display: flex;
-  height: 90%;
 }
 
 .main {
   flex-grow: 1;
+  height: fit-content;
 }
 .main__pics {
   display: flex;
@@ -346,6 +429,18 @@ body {
 .main__content--description-recommend-text {
   margin-right: auto;
   color: var(--color-grey-dark-2);
+}
+.main__footer {
+  padding: 2rem 2rem;
+  background-color: var(--color-grey-light-1);
+  text-align: center;
+}
+.main__footer--heading {
+  padding: 1rem 0 2rem 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--color-grey-dark-2);
+  text-transform: uppercase;
 }
 
 /*# sourceMappingURL=main.css.map */

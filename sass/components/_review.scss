@@ -1,0 +1,66 @@
+.review {
+  position: relative;
+  margin: 2rem 1rem;
+
+  background-color: var(--color-grey-light-1);
+  box-shadow: 5px 5px 5px var(--color-grey-dark-3);
+
+  color: var(--color-grey-dark-2);
+
+  &__body {
+    padding: 2rem 2rem 1rem 2rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__footer {
+    display: flex;
+  }
+
+  &__user {
+    display: flex;
+    margin-right: auto;
+    padding: 1rem 2rem;
+
+    &--text {
+      padding-left: 1rem;
+    }
+
+    &--img {
+      width: 3rem;
+      height: 3rem;
+
+      border-radius: 10rem;
+    }
+
+    &--name {
+      font-size: 1.3rem;
+    }
+
+    &--date {
+      font-size: inherit;
+    }
+
+    &--rating {
+      display: flex;
+      align-items: center;
+
+      padding: 0 2rem;
+
+      font-size: 1.5rem;
+      color: var(--color-primary);
+    }
+  }
+
+  &::before {
+    content: "\201C";
+    position: absolute;
+    top: -2rem;
+    left: -0.5rem;
+    z-index: 1;
+
+    font-family: sans-serif;
+    font-size: 10rem;
+    color: var(--color-grey-light-3);
+  }
+}
