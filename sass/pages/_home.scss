@@ -6,6 +6,12 @@
     var(--color-primary-light),
     var(--color-primary-dark)
   );
+
+  @include respond(phone) {
+    overflow-x: hidden;
+
+    padding: 0;
+  }
 }
 
 .box {
@@ -14,10 +20,19 @@
 
   background-color: var(--color-grey-light-3);
   box-shadow: 5px 10px 30px 10px rgba(#000, 0.3);
+
+  @include respond(phone) {
+    margin: 0;
+    width: 100%;
+  }
 }
 
 .content {
   display: flex;
+
+  @include respond(phone) {
+    flex-direction: column;
+  }
 }
 
 .main {
@@ -42,7 +57,7 @@
     display: flex;
 
     &--description {
-      flex: 0 0 60%;
+      flex: 0 0 55%;
 
       margin: 2rem 2rem;
 
@@ -96,6 +111,23 @@
           color: var(--color-grey-dark-2);
         }
       }
+
+      @include respond(phone) {
+        max-width: 70%;
+      }
+    }
+
+    &--reviews {
+      flex: 0 0 35%;
+
+      @include respond(tab) {
+        max-width: 30rem;
+      }
+    }
+
+    @include respond(tab) {
+      flex-direction: column;
+      align-items: center;
     }
   }
 

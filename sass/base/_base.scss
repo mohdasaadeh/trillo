@@ -21,6 +21,10 @@
 
 html {
   font-size: 62.5%;
+
+  @include respond(tab) {
+    font-size: 50%;
+  }
 }
 
 body {

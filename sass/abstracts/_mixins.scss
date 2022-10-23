@@ -1,0 +1,19 @@
+@mixin respond($screen-size) {
+  @if ($screen-size == large) {
+    @media (min-width: 75em) {
+      @content;
+    }
+  }
+
+  @if ($screen-size == tab) {
+    @media (max-width: 62.5em) {
+      @content;
+    }
+  }
+
+  @if ($screen-size == phone) {
+    @media (max-width: 37.5em) {
+      @content;
+    }
+  }
+}

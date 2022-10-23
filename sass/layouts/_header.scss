@@ -40,7 +40,7 @@
       &-text {
         position: absolute;
         top: 1rem;
-        right: 0.5rem;
+        right: 0.7rem;
         width: 1.5rem;
         height: 1.5rem;
 
@@ -49,6 +49,18 @@
 
         color: var(--color-grey-light-1);
         text-align: center;
+
+        @include respond(large) {
+          right: 1.5rem;
+        }
+
+        @media (max-width: 48.5em) {
+          right: 0.3rem;
+        }
+
+        @include respond(phone) {
+          right: 0;
+        }
       }
     }
 
